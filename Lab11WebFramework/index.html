@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lab11WebFramework — Demo UI</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Heroicons (optional inline use) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light" id="page-body">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/logo.png" alt="Logo" width="36" height="36" class="me-2">
+        <span class="fw-bold" id="brand-name">Lab11WebFramework</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Fitur</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+          <li class="nav-item ms-2">
+            <!-- Dark mode toggle -->
+            <button id="dm-toggle" class="btn btn-outline-primary btn-sm" title="Toggle mode">🌙 Mode Gelap</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="py-6" id="hero">
+    <div class="container d-flex flex-column flex-lg-row align-items-center gap-4">
+      <div class="hero-text flex-fill">
+        <h1 class="display-5 fw-bold mb-3">Lab11WebFramework — Framework PHP OOP Modular</h1>
+        <p class="lead text-muted mb-4">Boilerplate ringan untuk membuat aplikasi web modular berbasiskan PHP OOP. Fokus: struktur rapi, form CRUD, autosave draft, dan desain responsif.</p>
+        <div class="d-flex gap-2">
+          <a href="#features" class="btn btn-primary btn-lg">Mulai Sekarang</a>
+          <a href="#gallery" class="btn btn-outline-secondary btn-lg">Lihat Demo</a>
+        </div>
+      </div>
+
+      <div class="hero-visual text-center">
+        <!-- Ilustrasi / placeholder (ganti dengan SVG/PNG asli) -->
+        <div class="card shadow-sm p-4 border-0" style="max-width:380px;">
+          <img src="assets/img/placeholder-hero.png" alt="Ilustrasi" class="img-fluid rounded mb-3">
+          <p class="small text-muted mb-0">UI prototype — ganti dengan ilustrasi vektor Anda</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="h3 fw-semibold">Fitur Utama</h2>
+        <p class="text-muted">Beberapa kekuatan Lab11WebFramework</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm p-3">
+            <div class="fs-2">🧩</div>
+            <h5 class="mt-2">Modular Routing</h5>
+            <p class="text-muted small mb-0">Pisahkan fitur menjadi modul supaya mudah dikembangkan dan dipelihara.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm p-3">
+            <div class="fs-2">👥</div>
+            <h5 class="mt-2">CRUD User</h5>
+            <p class="text-muted small mb-0">Form tambah/ubah user lengkap (avatar, hobi, agama, dll.).</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm p-3">
+            <div class="fs-2">💾</div>
+            <h5 class="mt-2">Autosave Draft</h5>
+            <p class="text-muted small mb-0">Simpan draft form ke localStorage agar tidak hilang saat refresh.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm p-3">
+            <div class="fs-2">🎨</div>
+            <h5 class="mt-2">UI Responsif + Dark</h5>
+            <p class="text-muted small mb-0">Desain cerah dengan pilihan dark mode untuk kenyamanan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO / GALLERY -->
+  <section id="gallery" class="py-5 bg-white">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h3 class="h5 mb-0">Portfolio / Gallery</h3>
+          <p class="small text-muted mb-0">Kumpulan screenshot & hasil kerja (klik untuk melihat lebih besar)</p>
+        </div>
+        <div>
+          <!-- filter placeholder -->
+          <div class="btn-group" role="group">
+            <button class="btn btn-outline-secondary btn-sm">Semua</button>
+            <button class="btn btn-outline-secondary btn-sm">UI</button>
+            <button class="btn btn-outline-secondary btn-sm">Backend</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3" id="gallery-grid">
+        <!-- Gunakan gambar nyata di assets/img/gallery/1.jpg dst. -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card gallery-card">
+            <img src="assets/img/gallery/1.jpg" loading="lazy" alt="Gallery 1" class="card-img-top img-fluid" data-index="0">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card gallery-card">
+            <img src="assets/img/gallery/2.jpg" loading="lazy" alt="Gallery 2" class="card-img-top img-fluid" data-index="1">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card gallery-card">
+            <img src="assets/img/gallery/3.jpg" loading="lazy" alt="Gallery 3" class="card-img-top img-fluid" data-index="2">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card gallery-card">
+            <img src="assets/img/gallery/4.jpg" loading="lazy" alt="Gallery 4" class="card-img-top img-fluid" data-index="3">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card gallery-card">
+            <img src="assets/img/gallery/5.jpg" loading="lazy" alt="Gallery 5" class="card-img-top img-fluid" data-index="4">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card gallery-card">
+            <img src="assets/img/gallery/6.jpg" loading="lazy" alt="Gallery 6" class="card-img-top img-fluid" data-index="5">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-5 bg-dark text-white" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Lab11WebFramework</h5>
+          <p class="small">Framework sederhana berbasis PHP OOP — demo UI/UX.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled small">
+            <li><a class="text-white-50" href="#">Beranda</a></li>
+            <li><a class="text-white-50" href="#">Fitur</a></li>
+            <li><a class="text-white-50" href="#">Dokumentasi</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6>Kontak</h6>
+          <p class="small mb-1">Email: admin@example.com</p>
+          <p class="small mb-1">Lokasi: Jakarta, Indonesia</p>
+          <p class="small text-muted mt-3">Catatan: Draft form disimpan sementara di localStorage browser.</p>
+        </div>
+      </div>
+
+      <div class="text-center pt-3 border-top border-white-10">
+        <small class="text-white-50">&copy; 2025 Lab11WebFramework — Semua hak cipta dilindungi.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Gallery Modal (lightbox sederhana) -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+          <img src="" alt="Preview" id="gallery-modal-img" class="img-fluid w-100 rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
