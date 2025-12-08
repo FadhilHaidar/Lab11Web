@@ -32,74 +32,70 @@ Proyek ini mengimplementasikan struktur web modern dengan pemisahan core, module
 
 Menggunakan index.php?mod=user&act=index, router akan:
 
-memilih modul
+- memilih modul
 
-memilih controller
+- memilih controller
 
-menjalankan method tertentu
+- menjalankan method tertentu
 Mirip mini-MVC sederhana.
 
 2. OOP Database Class
 
 Class Database.php menyediakan:
 
-koneksi otomatis
+- koneksi otomatis
 
-query SELECT/INSERT/UPDATE/DELETE
+- query SELECT/INSERT/UPDATE/DELETE
 
-error handling detail
+- error handling detail
 
-sanitasi input (escape())
+- sanitasi input (escape())
 
 3. Modul User (CRUD Lengkap)
 
 Fitur:
 
-Tambah user
+- Tambah user
 
-Edit user
+- Edit user
 
-Hapus user
+- Hapus user
 
-Daftar user
+- Daftar user
 
-Checkbox multi-hobi
+- Checkbox multi-hobi
 
-Validasi dasar
+- Validasi dasar
 
-Avatar opsional
-
-Autosave draft form
+- Autosave draft form
 
 4. Pagination & Search
 
-Search berdasarkan nama/email
+- Search berdasarkan nama/email
 
-Pagination otomatis
+- Pagination otomatis
 
-Pagination tetap menyertakan keyword search
+- Pagination tetap menyertakan keyword search
 
 5. Frontend Modern
 
-Bootstrap 5
+- Bootstrap 5
 
-Layout responsif
+- Layout responsif
 
-Switch tampilan Tabel ↔ Card
+- Switch tampilan Tabel ↔ Card
 
-Komponen UI reusable
+- Komponen UI reusable
 
-Dark mode toggle
-
-Gallery + modal preview
+- Dark mode toggle
 
 6. LocalStorage Autosave Draft
 
 Saat mengetik di form:
 
-data disimpan ke localStorage
+- data disimpan ke localStorage
 
-aman walau tab ditutup atau refresh
+- aman walau tab ditutup atau refresh
 
 ## Struktur Database
 
