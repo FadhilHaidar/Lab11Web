@@ -159,3 +159,5 @@ Fitur:
 <img width="957" height="624" alt="image" src="https://github.com/user-attachments/assets/e0b8e617-b0e8-49cb-8e22-1217d0f0e13a" />
 
 <img width="959" height="614" alt="image" src="https://github.com/user-attachments/assets/1e1d4ede-24bc-4884-82c7-b76e99304096" />
+
+<img width="957" height="595" alt="image" src="https://github.com/user-attachments/assets/0b04af2b-e032-43cf-a304-19f4dda6ce69" />
