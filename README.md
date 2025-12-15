@@ -1,4 +1,4 @@
-<img width="957" height="567" alt="image" src="https://github.com/user-attachments/assets/95c8bcf2-3ae5-40ff-b65a-11b09212694c" /># Laporan Praktikum 12: Autentikasi dan Session
+# Laporan Praktikum 12: Autentikasi dan Session
 
 Autentikasi merupakan fitur penting dalam aplikasi web untuk memastikan bahwa hanya pengguna yang memiliki hak akses yang dapat menggunakan sistem. Pada praktikum ini dibuat sebuah aplikasi PHP berbasis OOP yang mengimplementasikan autentikasi pengguna, manajemen session, pengamanan password, serta pengelolaan artikel sebagai contoh penerapan CRUD (Create, Read).
 
