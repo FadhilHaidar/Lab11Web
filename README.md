@@ -1,128 +1,161 @@
-# Laporan Praktikum 11: PHP OOP Lanjutan
+<img width="957" height="567" alt="image" src="https://github.com/user-attachments/assets/95c8bcf2-3ae5-40ff-b65a-11b09212694c" /># Laporan Praktikum 12: Autentikasi dan Session
 
-Framework web sederhana berbasis PHP OOP, dibuat untuk memenuhi tugas praktikum pemrograman web dengan konsep modularisasi, routing, template engine ringan, dan penerapan CRUD.
-
-Proyek ini mengimplementasikan struktur web modern dengan pemisahan core, modules, templates, dan assets, sehingga mudah dikembangkan, dipelihara, dan dipahami oleh pemula.
+Autentikasi merupakan fitur penting dalam aplikasi web untuk memastikan bahwa hanya pengguna yang memiliki hak akses yang dapat menggunakan sistem. Pada praktikum ini dibuat sebuah aplikasi PHP berbasis OOP yang mengimplementasikan autentikasi pengguna, manajemen session, pengamanan password, serta pengelolaan artikel sebagai contoh penerapan CRUD (Create, Read).
 
 ## Tujuan Praktikum
 
-1. Membuat framework web sederhana berbasis PHP OOP.
+1. Menerapkan konsep autentikasi dan session pada PHP
 
-2. Menerapkan modularisasi kode (module user, module artikel, dll).
+2. Menggunakan enkripsi password dengan password_hash()
 
-3. Membuat sistem routing otomatis menggunakan parameter URL.
+3. Membuat fitur ubah password dengan validasi
 
-4. Menerapkan CRUD User dengan form lengkap.
+4. Mengimplementasikan modul artikel berbasis CRUD
 
-5. Menampilkan data dengan tabel + tampilan kartu (card).
+5. Membuat tampilan web yang rapi dan responsif menggunakan Bootstrap
 
-6. Membuat search filter dan pagination.
+## Struktur Folder
 
-7. Menyimpan data sementara menggunakan localStorage (autosave draft).
+<img width="295" height="571" alt="image" src="https://github.com/user-attachments/assets/007c04bf-6ebd-4ac4-8015-59b93420c41a" />
 
-8. Menerapkan layout responsif menggunakan Bootstrap 5.
+## Database
 
-## Struktur Direktori Project
+1. Tabel users
 
-<img width="493" height="558" alt="image" src="https://github.com/user-attachments/assets/92775a63-7eed-490f-82ae-828b0cd114d9" />
+Digunakan untuk menyimpan data pengguna dan autentikasi.
 
-## Fitur-Fitur Utama
+Field utama:
 
-1. Routing Modular
+- id
 
-Menggunakan index.php?mod=user&act=index, router akan:
+- nama
 
-- memilih modul
+- username
 
-- memilih controller
+- password
 
-- menjalankan method tertentu
-Mirip mini-MVC sederhana.
+- last_password_change
 
-2. OOP Database Class
+2. Tabel articles
 
-Class Database.php menyediakan:
+Digunakan untuk menyimpan data artikel.
 
-- koneksi otomatis
+Field utama:
 
-- query SELECT/INSERT/UPDATE/DELETE
+- id
 
-- error handling detail
+- judul
 
-- sanitasi input (escape())
+- isi
 
-3. Modul User (CRUD Lengkap)
+- kategori
+
+- penulis
+
+- created_at
+
+## Alur Autentikasi Sistem
+
+<img width="254" height="313" alt="image" src="https://github.com/user-attachments/assets/68a4ed43-293e-4fe6-9cfb-1af9bebc170c" />
+
+Keamanan
+
+- Password dienkripsi menggunakan password_hash()
+
+- Verifikasi password menggunakan password_verify()
+
+- Proteksi halaman menggunakan session
+
+- CSRF token pada form penting
+
+- Logout otomatis setelah ganti password
+
+## Halaman Profil User
 
 Fitur:
 
-- Tambah user
+- Menampilkan nama dan username user
 
-- Edit user
+- Menampilkan status login
 
-- Hapus user
+- Menampilkan waktu terakhir perubahan password
 
-- Daftar user
+- Form ubah password dengan validasi lengkap
 
-- Checkbox multi-hobi
+## Modul Artikel
 
-- Validasi dasar
+1. Daftar Artikel
 
-- Autosave draft form
+- Menampilkan artikel dalam bentuk card grid
 
-4. Pagination & Search
+- Menampilkan judul, ringkasan, kategori, dan tanggal
 
-- Search berdasarkan nama/email
+- Tombol Baca Selengkapnya
 
-- Pagination otomatis
+2. Detail Artikel
 
-- Pagination tetap menyertakan keyword search
+- Tampilan full-width reading mode
 
-5. Frontend Modern
+- Menampilkan isi lengkap artikel
 
-- Bootstrap 5
+- Metadata: penulis, kategori, tanggal
 
-- Layout responsif
+- Breadcrumb navigasi
 
-- Switch tampilan Tabel ↔ Card
+3. Tambah Artikel
 
-- Komponen UI reusable
+- Form input judul, isi, kategori
 
-- Dark mode toggle
+- Penulis otomatis dari user login
 
-6. LocalStorage Autosave Draft
+- Status progres:
 
-Saat mengetik di form:
+✅ Artikel berhasil disimpan
 
-- data disimpan ke localStorage
+❌ Artikel gagal disimpan
 
-- aman walau tab ditutup atau refresh
+## Flow Diagram Modul Artikel
 
-## Struktur Database
+<img width="249" height="371" alt="image" src="https://github.com/user-attachments/assets/9a2a24b5-a1d5-435d-81d5-11338a700bd4" />
 
-<img width="567" height="487" alt="image" src="https://github.com/user-attachments/assets/119e71e2-d4cf-450c-8ff6-23de1f7245d6" />
+## Screenshot
 
-## Tampilan Antarmuka (UI Preview)
+1. Halaman Login
 
-Halaman daftar user
+<img width="957" height="515" alt="image" src="https://github.com/user-attachments/assets/177f14f9-8c45-4595-a460-8e30f24b18bb" />
 
-<img width="1000" height="494" alt="image" src="https://github.com/user-attachments/assets/87fbb991-8943-4d7f-be80-664ddbd3d3a5" />
+<img width="957" height="514" alt="image" src="https://github.com/user-attachments/assets/9deef138-41a8-4f27-b52f-6b3cb593f577" />
 
-Form tambah
+<img width="958" height="586" alt="image" src="https://github.com/user-attachments/assets/8298068b-2592-47e0-895f-f7d2c7e7b2ff" />
 
-<img width="999" height="799" alt="image" src="https://github.com/user-attachments/assets/9e2542f9-f84c-4e08-9d4b-4e501f09c6b9" />
+2. Dashboard Profil User
 
-<img width="1001" height="792" alt="image" src="https://github.com/user-attachments/assets/05353103-82e3-46ea-9e91-269facb68c03" />
+<img width="956" height="731" alt="image" src="https://github.com/user-attachments/assets/7eef6ad2-ab9e-4f5a-9086-052b0ac10b76" />
 
-Form edit
+3. Daftar Artikel
 
-<img width="998" height="600" alt="image" src="https://github.com/user-attachments/assets/9da6e4d0-e8b3-4385-9841-d02ae428dfd4" />
+<img width="957" height="680" alt="image" src="https://github.com/user-attachments/assets/7948b76d-557c-4635-87e2-bae165edf009" />
 
-<img width="998" height="691" alt="image" src="https://github.com/user-attachments/assets/4f515a01-a3b7-4296-a7d2-22223718b6c0" />
+4. Detail Artikel
 
-Tabel ↔ Card switch
+<img width="957" height="567" alt="image" src="https://github.com/user-attachments/assets/74f0d73b-9e99-4ba4-b58b-bf16070ceb2d" />
 
-<img width="999" height="609" alt="image" src="https://github.com/user-attachments/assets/04d7375a-5d6e-430a-9bf6-cd2993430e58" />
+5. Form Tambah Artikel
 
-Dark mode
+<img width="958" height="780" alt="image" src="https://github.com/user-attachments/assets/b4ff5733-fe10-4d72-bbe9-1391f6367250" />
 
-<img width="998" height="582" alt="image" src="https://github.com/user-attachments/assets/f0ee8bdc-f757-4df1-aabc-2e6f2d6fe73e" />
+<img width="956" height="780" alt="image" src="https://github.com/user-attachments/assets/8800597b-0e9b-4b64-9cac-5197a846a468" />
+
+6. Alert sukses simpan artikel
+
+<img width="957" height="841" alt="image" src="https://github.com/user-attachments/assets/abf831f5-db64-455b-be9d-22c279ddf41c" />
+
+7. Database tabel articles
+
+<img width="958" height="656" alt="image" src="https://github.com/user-attachments/assets/e3278bce-58ee-40aa-b182-7a331147d2c2" />
+
+8. Database field last_password_change
+
+<img width="957" height="624" alt="image" src="https://github.com/user-attachments/assets/e0b8e617-b0e8-49cb-8e22-1217d0f0e13a" />
+
+<img width="959" height="614" alt="image" src="https://github.com/user-attachments/assets/1e1d4ede-24bc-4884-82c7-b76e99304096" />
