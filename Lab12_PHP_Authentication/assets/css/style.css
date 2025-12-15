@@ -1,0 +1,25 @@
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+article {
+    max-width: 900px;
+    margin: auto;
+}
+
+article h1 {
+    line-height: 1.3;
+}
+
+article .lh-lg {
+    color: #333;
+}
